@@ -85,8 +85,8 @@ export function CheckOut({
               </span>
             )}
           </div>
-          <div className="flex cursor-pointer" onClick={() => removeItem(item)}>
-            <Trash2Icon className="size-4 relative top-[2px] mr-2" />{" "}
+          <div className="flex cursor-pointer dark:text-neutral-300 text-neutral-900" onClick={() => removeItem(item)}>
+            <Trash2Icon className=" relative top-[2px] mr-2" />{" "}
             <span className="text-sm">Remove</span>
           </div>
         </div>
@@ -127,9 +127,9 @@ export function CheckOut({
       {cart.length ? (
         <>
           <Button
-            onClick={() => (cartOpen ? setCartOpen(false) : setCartOpen(true))} className="bg-transparent hover:bg-transparent"
+            onClick={() => (cartOpen ? setCartOpen(false) : setCartOpen(true))} className="bg-transparent hover:bg-transparent dark:text-neutral-300 text-neutral-900 "
           >
-            <ShoppingCartIcon className="size-4 mr-2" />
+            <ShoppingCartIcon className="size-6 mr-2" />
           </Button>
           {cartOpen ? (
             <div className="absolute right-0 top-12 w-[330px] rounded-lg border border-gray-300 bg-white p-4 text-gray-700 dark:border-gray-500 dark:bg-black dark:text-gray-200">
