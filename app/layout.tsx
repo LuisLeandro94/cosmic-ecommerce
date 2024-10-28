@@ -23,7 +23,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body>
+      <body className="dark:bg-neutral-900 bg-neutral-300">
         <CartProvider>
           <Header />
           {children}
