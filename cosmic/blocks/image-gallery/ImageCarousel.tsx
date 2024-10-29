@@ -1,6 +1,6 @@
 // ImageCarousel.tsx
-import { ImageCarouselClient } from "./ImageCarouselClient"
 import { cosmic } from "@/cosmic/client"
+import { ImageCarouselClient } from "./ImageCarouselClient"
 
 export async function ImageCarousel({
   query,
@@ -31,7 +31,7 @@ export async function ImageCarousel({
           No images added to the {page.title} Object image gallery yet.{" "}
           <a
             href={`https://app.cosmicjs.com/${process.env.COSMIC_BUCKET_SLUG}/objects/${page.id}`}
-            className="text-blue-500"
+            className="text-teal-700"
             target="_blank"
             rel="noreferrer"
           >

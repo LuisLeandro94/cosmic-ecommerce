@@ -31,7 +31,7 @@ export async function Header() {
           />
         </Link>
         <NavMenu query={{ type: "navigation-menus", slug: "header" }} />
-        <div className="hidden ml-4 md:flex text-center justify-center dark:text-neutral-300 text-neutral-900">
+        <div className="hidden ml-4 md:flex text-center justify-center">
           <ThemeToggleSwitch />
           <CheckOut productPath={"/shop"} />
         </div>

@@ -3,8 +3,8 @@
 import Zoom from "react-medium-image-zoom"
 import "react-medium-image-zoom/dist/styles.css"
 
-import { useState } from "react"
 import { cn } from "@/cosmic/utils"
+import { useState } from "react"
 
 export type GalleryItemType = {
   imgix_url: string
@@ -34,7 +34,7 @@ export function ImageGalleryClient({ items }: { items: GalleryItemType[] }) {
               key={id}
               className={cn(
                 `overflow-hidden rounded-xl border-4`,
-                item.imgix_url === mainItem.imgix_url ? "border-blue-500" : ""
+                item.imgix_url === mainItem.imgix_url ? "border-teal-600" : ""
               )}
             >
               <img
