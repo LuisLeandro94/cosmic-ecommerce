@@ -127,7 +127,7 @@ export function CheckOut({
       {cart.length ? (
         <>
           <Button
-            onClick={() => (cartOpen ? setCartOpen(false) : setCartOpen(true))} className="bg-transparent hover:bg-transparent dark:text-neutral-300 text-neutral-900 "
+            onClick={() => (cartOpen ? setCartOpen(false) : setCartOpen(true))} className="bg-transparent hover:bg-transparent "
           >
             <ShoppingCartIcon className="size-6 mr-2" />
           </Button>
