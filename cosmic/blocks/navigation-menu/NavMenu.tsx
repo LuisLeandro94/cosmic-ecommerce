@@ -34,7 +34,7 @@ export async function NavMenu({
               href={item.link}
               key={item.title}
               target={item.open_in_new_tab ? "_blank" : ""}
-              className="group inline-flex h-10 w-full items-center justify-center bg-transparent px-4 py-2 text-sm font-medium text-zinc-900 transition-colors hover:bg-zinc-100 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-zinc-100 data-[state=open]:bg-zinc-100 dark:text-zinc-50 dark:hover:bg-teal-800 dark:data-[state=active]:bg-zinc-900 dark:data-[state=open]:bg-zinc-900 md:w-max"
+              className="group inline-flex h-10 w-full items-center justify-center bg-transparent px-4 py-2 text-sm font-medium text-zinc-900 transition-colors hover:bg-teal-600 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-zinc-100 data-[state=open]:bg-zinc-100 dark:text-zinc-50 dark:hover:bg-teal-800 dark:data-[state=active]:bg-zinc-900 dark:data-[state=open]:bg-zinc-900 md:w-max"
             >
               {item.title}
             </Link>

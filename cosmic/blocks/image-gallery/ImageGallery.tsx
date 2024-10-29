@@ -1,6 +1,6 @@
 // ImageGallery.tsx
-import { ImageGalleryClient } from "./ImageGalleryClient"
 import { cosmic } from "@/cosmic/client"
+import { ImageGalleryClient } from "./ImageGalleryClient"
 
 export async function ImageGallery({
   query,
@@ -31,7 +31,7 @@ export async function ImageGallery({
           No images added to the {page.title} Object image gallery yet.{" "}
           <a
             href={`https://app.cosmicjs.com/${process.env.COSMIC_BUCKET_SLUG}/objects/${page.id}`}
-            className="text-blue-500"
+            className="text-teal-700"
             target="_blank"
             rel="noreferrer"
           >

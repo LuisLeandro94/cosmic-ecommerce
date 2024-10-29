@@ -1,9 +1,8 @@
 "use client"
-import React, { useContext } from "react"
-import { Button } from "@/cosmic/elements/Button"
-import { useState } from "react"
-import { Loader2, XIcon } from "lucide-react"
 import { CartContext } from "@/cosmic/blocks/ecommerce/CartProvider"
+import { Button } from "@/cosmic/elements/Button"
+import { Loader2, XIcon } from "lucide-react"
+import React, { useContext, useState } from "react"
 
 export type ProductType = {
   title: string
@@ -40,7 +39,7 @@ export function AddToCart({
 
   function removeProduct(productId: string) {
     if (!cart) return
-    let newCart = cart.filter(
+    const newCart = cart.filter(
       (product: ProductType) => product.id !== productId
     )
     localStorage.setItem("cart", JSON.stringify(newCart))
@@ -48,7 +47,7 @@ export function AddToCart({
   }
 
   function productInCart(product: ProductType) {
-    let productInCart = cart.filter(
+    const productInCart = cart.filter(
       (productLoop: ProductType) => productLoop.id === product.id
     )[0]
     return productInCart
@@ -85,7 +84,7 @@ export function AddToCart({
           )}
         </Button>
       ) : (
-        <Button disabled={submitting} type="submit" onClick={handleSubmit}>
+        <Button disabled={submitting} type="submit" onClick={handleSubmit} className="bg-teal-600 dark:bg-teal-800 hover:bg-teal-700 hover:dark:bg-teal-900">
           {submitting ? (
             <>
               <Loader2 className="size-4 mr-2 animate-spin" /> Updating
