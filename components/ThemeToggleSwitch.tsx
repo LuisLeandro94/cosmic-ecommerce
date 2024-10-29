@@ -20,7 +20,7 @@ const ThemeToggleSwitch = () => {
     }
 
     return (
-        <div className="toggler dark:text-neutral-300 text-neutral-900 m-0 flex items-center ">
+        <div className="toggler m-0 flex items-center ">
             {isChecked ? <Sun onClick={handleToggle} className="size-6" /> : <Moon onClick={handleToggle} className="size-6" />}
         </div>
     );
