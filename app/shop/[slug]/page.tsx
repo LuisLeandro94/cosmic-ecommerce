@@ -1,18 +1,19 @@
 // app/shop/[slug]/page.tsx
-import { SingleProduct } from "@/cosmic/blocks/ecommerce/SingleProduct"
-export default async function SingleProductPage({
-  params,
-  searchParams
-}: {
-    params: { slug: string }
-    searchParams: {
-      success?: string
-    }
-  }) {
+import { SingleProduct } from "@/cosmic/blocks/ecommerce/SingleProduct";
+
+interface PageProps {
+  params: Promise<{ slug: string }>;
+  searchParams: Promise<{ success?: string }>;
+}
+
+export default async function SingleProductPage({ params, searchParams }: PageProps) {
+  const resolvedParams = await params;
+  const resolvedSearchParams = await searchParams;
+
   return (
     <SingleProduct
-      query={{ slug: params.slug, type: "products" }}
-      purchased={searchParams.success ? true : false}
+      query={{ slug: resolvedParams.slug, type: "products" }}
+      purchased={resolvedSearchParams.success ? true : false}
     />
   );
 }

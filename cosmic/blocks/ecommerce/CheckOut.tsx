@@ -8,7 +8,7 @@ import { loadStripe } from "@stripe/stripe-js"
 import { ShoppingCartIcon, Trash2Icon, XIcon } from "lucide-react"
 import Link from "next/link"
 import { useSearchParams } from "next/navigation"
-import React, { useContext, useState } from "react"
+import React, { Suspense, useContext, useState } from "react"
 
 const stripePromise = loadStripe(
   process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY || ""
@@ -22,7 +22,7 @@ function cartTotal(cart: ProductType[]) {
   return total
 }
 
-export function CheckOut({
+function CheckOutContent({
   className,
   productPath,
 }: {
@@ -187,4 +187,18 @@ export function CheckOut({
       )}
     </div>
   )
+}
+
+export function CheckOut({
+  className,
+  productPath,
+}: {
+  className?: string;
+  productPath: string;
+}) {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <CheckOutContent className={className} productPath={productPath} />
+    </Suspense>
+  );
 }
